@@ -1,0 +1,123 @@
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+     //Zad1
+    System.out.println("Kacper Mederski");
+    //Zad2
+    String txt = "KacperMederski";
+    System.out.println("Dlugosc imienia i nazwiska: " + txt.length());
+    //Zad3
+    String wyraz1 = "Ala";
+    String wyraz2 = "Ma";
+    String wyraz3 = "Kota";
+    System.out.println(wyraz1 + " " + wyraz2 + " " + wyraz3);
+    //Zad4
+    System.out.println("          *");
+    System.out.println("          **");
+    System.out.println("          ***");
+    System.out.println("**************");
+    System.out.println("***************");
+    System.out.println("**************");
+    System.out.println("          ***");
+    System.out.println("          **");
+    System.out.println("          *");
+    
+    System.out.println("            *           ");
+    System.out.println("          *   *       ");
+    System.out.println("        *   *   *              ");
+    System.out.println("      *   *   *   *                ");
+    System.out.println("    *   *   *   *   *              ");
+    System.out.println("  *   *   *   *   *   *             ");
+    System.out.println("    *   *   *   *   *              ");
+    System.out.println("      *   *   *   *                ");
+    System.out.println("        *   *   *              ");
+    System.out.println("          *   *       ");
+    System.out.println("            *           ");
+    
+    //Zad5
+    String ala = "ala ma kota";
+    System.out.println(ala.replace('a', 'e'));
+    //Zad6
+    System.out.println(ala.toUpperCase());
+    System.out.println(ala.toLowerCase());
+    //Zad7
+    // A = 65, ! = 33, @ = 64, > = 62, ~ = 126, \n = 10, \b = 08
+    //Zad8
+    //Cyfry = 48=57, Male = 97-122, Duze = 65-90
+    //Zad9 
+    String myStr = "Grzesiek nie wiedzial dlaczego ... jest tak drapieznym ... mimo, ze jego ... na to nie wskazuje";
+    String regex = "[...]+";
+    System.out.println(myStr.replaceAll(regex, "medi"));
+    //Zad10
+    System.out.printf("%s to najlepsza ksiazka napisana przez %s","Budnik i Pokrzywinski o formule 1", "Bartosza Budnika i Bartosza Pokrzywinskiego");
+    //Zad11
+    System.out.println(" ");
+    System.out.printf(" wodrze ");
+    System.out.printf(" wodrze ");
+    System.out.printf(" wodrze ");
+    System.out.printf(" wodrze ");
+    System.out.printf(" wodrze ");
+    //Zad12
+    LocalDateTime myDateObj = LocalDateTime.now();
+    System.out.println(" ");
+    
+    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+
+    String formattedDate = myDateObj.format(myFormatObj);
+    System.out.println("Dzisiejsza data i godzina: " + formattedDate); 
+    //Zad13
+    //54 = 6, 103 = g, 241 = n z kreska, 67 = C, 9999 = 24.460417 , 14 = ShiftOut, 174712 = 0-282700
+    
+    //ZESTAW2
+    //Zad1
+    //1.float, 2.float, 3.int, 4.int, 5.int, 6.int, 7.int, 8.int
+    //Zad2
+    int Num = (int)(((Math.sqrt(7)-1)/(2)) + (3*3*3)%2);
+    System.out.println(Num);
+    int Uro = (int)((2003)/(30+9));
+    System.out.println(Uro);
+    int Num1 = (int)((3+Math.sqrt(3))/(Math.sqrt(5)/2)/(3)+1);
+    System.out.println(Num1);
+    int Num2 = 61%3%2;
+    System.out.println(Num2);
+    int Num3 = (int)((8%6+1)/(Math.pow(2, 1/4)));
+    System.out.println(Num3);
+    //Zad3
+    Scanner myObj = new Scanner(System.in);
+    System.out.println("Wpisz Imie: ");
+    String Imie = myObj.nextLine(); 
+    System.out.println("Wpisz Nazwisko: ");
+    String Nazwisko = myObj.nextLine(); 
+    System.out.println("Twoje Imie i Nazwisko: " + Imie + (" ") + Nazwisko);
+    myObj.close();
+    //Zad4
+    System.out.println("Wpisz liczbe: ");
+    double jeden = myObj.nextDouble(); 
+    System.out.println("Wpisz druga liczbe: ");
+    double dwa = myObj.nextDouble();
+    double suma = jeden + dwa;
+    double roznica = jeden - dwa;
+    double iloraz = jeden / dwa;
+    double iloczyn = jeden * dwa;
+    System.out.println("Twoje liczby: " + jeden + (" ") + dwa + (" ") + roznica + (" ") + suma + (" ") + iloraz + (" ") + iloczyn);
+    myObj.close();
+    //Zad5
+    Scanner reader = new Scanner(System.in);
+        System.out.println("wpisz 1 liczbe: ");
+        int liczba = reader.nextInt();
+        System.out.println(liczba+140);
+        System.out.println(liczba-31);
+        System.out.println(liczba*7);
+        System.out.println((float)liczba/13);
+        System.out.println(liczba%7);
+        System.out.println((liczba/4));
+        System.out.println((float)(Math.pow(liczba,45)));
+        System.out.println(liczba&59);
+        System.out.println(liczba^23);
+        System.out.println(liczba<<5);
+        System.out.println(liczba>>6);
+        reader.close();
+      }
+}
